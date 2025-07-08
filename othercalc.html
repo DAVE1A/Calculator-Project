@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="othercalc.css">
+</head>
+<body>
+    <div class="calc-body">
+        <div class="calc">
+            <p id="first"></p>
+        </div>
+    </div>
+       <div class="ans">
+          <h1 id="answerni">0</h1>
+        </div>
+
+    <div class="butts">
+            <div>
+               <ul>
+                   <li><button class="but" onclick="Display('1')">1</button></li>
+                   <li><button class="but"onclick="Display('2')">2</button></li>
+                   <li><button class="but"onclick="Display('3')">3</button></li>
+                   <li><button class="but"onclick="Display('%')" style="background-color: rgb(42, 168, 168);">%</button></li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                   <li><button class="but"onclick="Display('4')">4</button></li>
+                   <li><button class="but"onclick="Display('5')">5</button></li>
+                   <li><button class="but"onclick="Display('6')">6</button></li>
+                   <li><button class="but"onclick="Display('0')">0</button></li>
+                </ul>
+
+            </div>
+
+            <div>
+                <ul>
+                   <li><button class="but"onclick="Display('7')">7</button></li>
+                   <li><button class="but"onclick="Display('8')">8</button></li>
+                   <li><button class="but"onclick="Display('9')">9</button></li>
+                   <li><button class="but"onclick="Display('.')">.</button></li>
+                   
+                </ul>
+
+            </div>
+
+            <div>
+                <ul>
+                   <li><button class="but"onclick="Display('+')" style="background-color: rgb(42, 168, 168);">+</button></li>
+                   <li><button class="but"onclick="Display('-')" style="background-color: rgb(42, 168, 168);">-</button></li>
+                   <li><button class="but"onclick="Display('*')" style="background-color: rgb(42, 168, 168);">*</button></li>
+                   <li><button class="but"onclick="Display('/')" style="background-color: rgb(42, 168, 168);">/</button></li>
+                   
+                </ul>
+
+            </div>
+
+            <div>
+                <ul>
+                    <li><button class="but" style="background-color:  rgb(42, 168, 168);" onclick="back()">X</button></li>
+                    <li><button class="but" style="background-color: rgb(42, 168, 168);" onclick="Clear()" id="acc">AC</button></li>
+                    <li><button class="but" style="background-color: rgb(42, 168, 168);" onclick="Calculate()">=</button></li>
+                </ul>
+            </div>
+
+           
+             
+        </div>
+
+
+       <script>
+        const first = document.getElementById("first");
+        const answerni = document.getElementById("answerni");
+
+            function Display(value) {
+             first.innerHTML += value;
+                acc.innerHTML = "C";
+            
+         }
+
+            function Calculate() {
+              answerni.innerHTML = eval(first.innerHTML);
+            }
+
+            function Clear() {
+                 first.innerHTML = "";
+                 answerni.innerHTML = "0";
+                 acc.innerHTML = "AC";
+                 }
+            function back() {
+                
+                first.innerHTML = first.innerHTML.substring(0, first.innerHTML.length - 1);
+            }
+            
+  </script>
+</body>
+</html>

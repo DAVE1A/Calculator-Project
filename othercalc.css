@@ -1,0 +1,80 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    height: fit-content;
+}
+
+/* Main Calculator Body */
+.calc-body {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-top: 250px;
+    height: 33vh;
+    border: 2px solid #1e3a8a; /* deep blue */
+    background-color: #1e293b; /* slate/dark blue */
+    color: #e0f2fe; /* soft light blue */
+   
+}
+
+.calc{
+    height: 33vh;
+    max-width: 1000px; /* max width for larger screens */
+    min-width: 300px;
+}
+
+/* Calculator Display */
+.calc p{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    font-size: 7vh;
+    margin-right: 50px;
+    
+}
+
+/* Answer Section */
+.ans {
+    display: flex;
+    justify-content: end;
+    padding-right: 50px;
+    background-color: #1e293b;
+    color: #e0f2fe;
+    padding-bottom: 20px;
+}
+
+/* Button Container */
+.butts {
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    background-color: #1e293b;
+    padding: 1px;
+}
+
+.but {
+    width: 17vw; /* width scales with viewport */
+    height: 14vh; /* height scales with viewport */
+    margin-bottom: 15px;
+    background-color: #2563eb;
+    border: none;
+    border-radius: 20px;
+    font-size: 3vw;
+    color: white;
+    transition: background-color 0.3s ease;
+    /* prevents too small on tiny screens */
+}
+
+.but:hover {
+    background-color: #3b82f6; /* lighter blue on hover */
+}
+
+/* Remove Bullet Points from List */
+.butts ul li {
+    list-style: none;
+}
